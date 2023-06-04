@@ -13,14 +13,18 @@ set -euo
 # source /etc/os-release
 VERSION_CODENAME=bullseye
 
-apt-get install git wget
+apt-get install -y git wget
 
+# Puppet-release only covers the apt repo, puppet-agent is the actual software
 wget https://apt.puppet.com/puppet8-release-$VERSION_CODENAME.deb -O /tmp/puppet.deb
 apt-get install /tmp/puppet.deb
+apt-get update
+apt-get install puppet-agent
 
 /opt/puppetlabs/puppet/bin/gem install r10k
 
 mkdir -p /etc/puppetlabs
+rm -rf /etc/puppetlabs/code
 git clone https://github.com/doyoueven-click/puppet.git /etc/puppetlabs/code
 
-exec ./apply.sh
+exec /etc/puppetlabs/code/apply.sh
