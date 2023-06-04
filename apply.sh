@@ -1,10 +1,10 @@
 #!/bin/sh
 # Updates the code and runs puppet
-set -euo
+set -eu
 cd /etc/puppetlabs/code
 export PATH=/opt/puppetlabs/puppet/bin:$PATH
 
-git pull --ff-only
+git pull --ff-only --quiet
 
 # FIXME: r10k
 
