@@ -1,6 +1,6 @@
 #!/bin/sh
 # Bootstraps Puppet and runs the initial configuration pass
-set -euo
+set -euox
 # NOTE: This must be all in one file and it needs to install any dependencies itself.
 
 # Ok, so, the bootstrap process:

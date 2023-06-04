@@ -10,6 +10,7 @@ git pull --ff-only
 
 # FIXME: Add a debug option to enable graphs & catalog summary
 # FIXME: Log to console on bootstrap
+# TODO: --detailed-exitcodes
 # This is currently configured for maximum debugging and parsing.
 # We can probably reduce this flag set.
 puppet apply \
@@ -19,5 +20,4 @@ puppet apply \
   --graph \
   --strict warning \
   --summarize \
-  # --detailed-exitcodes \
   ./boxen/$(hostname -s).pp
