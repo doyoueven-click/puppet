@@ -33,7 +33,7 @@ More info can be found in at [Directories and files in the puppet docs](https://
 Since this is a "serverless" (no godbox) setup, it's up to us to define the loop.
 
 Cron is used to trigger regular runs. The specifics of this job are managed by
-puppetcode. Currently, it's set up to run every twenty minutes with a
+puppetcode. Currently, it's set up to run every hour with a
 host-specific offset.
 
 Every run has three major steps:
@@ -48,5 +48,5 @@ See `apply.sh` for the specifics.
 
 Change management is done through the forge UI (ie, through GitHub pull
 requests). When merged, new code will be picked up and applied to each server
-as they run their updates. That means that changes can take twenty minutes to
+as they run their updates. That means that changes can take an hour to
 apply, and neither deployment nor puppet status is reported to GitHub.
