@@ -27,4 +27,4 @@ mkdir -p /etc/puppetlabs
 rm -rf /etc/puppetlabs/code
 git clone https://github.com/doyoueven-click/puppet.git /etc/puppetlabs/code
 
-exec /etc/puppetlabs/code/apply.sh
+/etc/puppetlabs/code/apply.sh

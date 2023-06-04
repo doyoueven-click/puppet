@@ -14,7 +14,7 @@ git pull --ff-only
 # We can probably reduce this flag set.
 puppet apply \
   --verbose \
-  --logdest /var/log/puppet.log,/var/log/puppet.jsonl \
+  --logdest console,/var/log/puppet.log,/var/log/puppet.jsonl \
   --write-catalog-summary \
   --graph \
   --strict warning \
