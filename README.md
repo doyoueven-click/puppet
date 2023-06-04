@@ -18,6 +18,7 @@ Currently this only supports Debian systems.
 
 - `/etc/puppetlabs/code`: The home of this repo on a managed system (ie codedir and modulepath)
 - `/opt/puppetlabs/puppet`: The installation directory of the puppet package
+- `/var/log/puppet.log`: The output from the most recent run
 
 More info can be found in at [Directories and files in the puppet docs](https://www.puppet.com/docs/puppet/8/dirs_important_directories.html)
 
