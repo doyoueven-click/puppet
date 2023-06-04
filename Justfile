@@ -1,3 +1,3 @@
 bootstrap HOST:
-# FIXME: run as root
-  cat bootstrap.sh | ssh {{HOST}} /bin/sh
+  scp bootstrap.sh {{HOST}}:/tmp/bootstrap.sh
+  ssh -t {{HOST}} sudo sh /tmp/bootstrap.sh
