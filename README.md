@@ -4,6 +4,8 @@ Main puppet config repo.
 
 Currently this only supports Debian systems.
 
+More extensive documentation can be found in the [docs folder](./docs/README.md).
+
 ## Repo Layout
 
 - `boxen/`: Puppet entrypoints for each individual box, by host basename. Minimal
