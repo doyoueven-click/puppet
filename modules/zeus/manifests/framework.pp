@@ -4,7 +4,9 @@ class zeus::framework {
   file { '/etc/apt/sources.list':
     content => file('zeus/sources.list'),
   }
-  ~> exec { '/usr/bin/apt-get update': }
+  ~> exec { '/usr/bin/apt-get update': 
+    refreshonly => true,
+  }
 
   package { 'firmware-realtek': 
     ensure => 'latest',
