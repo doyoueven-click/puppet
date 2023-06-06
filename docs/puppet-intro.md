@@ -23,35 +23,33 @@ which we're not using right now.
 
 #### Classes
 
-```
-# Install requisites for hosting a static site
-class statichost::install (
-  String $param = 'default',
-) {
-  package { 'the-thing':
-    ensure => 'installed',
-  }
-}
-```
+    # Install requisites for hosting a static site
+    class statichost::install (
+      String $param = 'default',
+    ) {
+      package { 'the-thing':
+        ensure => 'installed',
+      }
+    }
+
+This is a singleton, either included in the system configuration or not.
 
 [Puppet docs: Classes](https://www.puppet.com/docs/puppet/latest/lang_classes.html)
 
 #### Types
 
-```
-# Define a staticly hosted site
-define statichost::site (
-  String $hostname = $title,
-  String $source
-) {
-  archive { "/srv/${hostname}":
-    source => $source
-  }
-  file { "/etc/caddy/${hostname}.caddy":
-    content => "..."
-  }
-}
-```
+    # Define a staticly hosted site
+    define statichost::site (
+      String $hostname = $title,
+      String $source
+    ) {
+      archive { "/srv/${hostname}":
+        source => $source
+      }
+      file { "/etc/caddy/${hostname}.caddy":
+        content => "..."
+      }
+    }
 
 [Puppet docs: Defined resource types](https://www.puppet.com/docs/puppet/latest/lang_defined_types.html)
 
@@ -62,9 +60,9 @@ resources the code defines may not be applied in the order given. The engine is
 allowed to reorder or parallelize operations as it sees fit. If there is a
 dependency between two resources, it must be given.
 
-## Names
+## Identifiers
 
-Names have both a capitalized and uncapitalized form, depending on the context.
+Identifiers have both a capitalized and uncapitalized form, depending on the context.
 
 Generally, you will refer to the instance of a class (a specific resource) in
 lower case, but the class itself in uppercase.
@@ -73,16 +71,16 @@ For this reason, many identifiers must start with a lower case letter.
 
 So `mymod::thingy` would become `Mymod::Thingy`.
 
+[Puppet docs: Reserved words and acceptable names](https://www.puppet.com/docs/puppet/latest/lang_reserved.html)
+
 ## Titles and namevars
 
 Take this:
 
-```
-thingy { 'something':
-  foo    => "bar",
-  answer => 42,
-}
-```
+    thingy { 'something':
+      foo    => "bar",
+      answer => 42,
+    }
 
 To break it down:
 
@@ -96,3 +94,7 @@ the name. It is possible to explicitly set the namevar, in which
 case the name and the title can differ.
 
 [Puppet docs: Defined resource types: `$title` and `$name`](https://www.puppet.com/docs/puppet/latest/lang_defined_types.html#title-and-name)
+
+## File Structure
+
+TODO: Write this

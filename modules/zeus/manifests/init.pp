@@ -1,3 +1,4 @@
+# Entrypoint for nodes of the Zeus cluster.
 class zeus {
   require dyec::common
 

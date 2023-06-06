@@ -6,4 +6,5 @@ class puppet {
     user    => 'root',
     minute  => fqdn_rand(60, "puppet apply"),
   }
+  # TODO: Also run puppet apply on reboot
 }
