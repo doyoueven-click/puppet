@@ -12,4 +12,6 @@ ship HOST:
   rsync --rsync-path="sudo rsync" -avz . {{HOST}}:/etc/puppetlabs/code
   ssh -t {{HOST}} sudo NO_GIT=true /etc/puppet/code/apply.sh
 
-
+# Show the docs in a nice local viewer
+docs:
+  frogmouth docs
