@@ -54,3 +54,45 @@ define statichost::site (
 ```
 
 [Puppet docs: Defined resource types](https://www.puppet.com/docs/puppet/latest/lang_defined_types.html)
+
+## Ordering
+
+Note that while the data manipulation parts of Puppet are imperative, the
+resources the code defines may not be applied in the order given. The engine is
+allowed to reorder or parallelize operations as it sees fit. If there is a
+dependency between two resources, it must be given.
+
+## Names
+
+Names have both a capitalized and uncapitalized form, depending on the context.
+
+Generally, you will refer to the instance of a class (a specific resource) in
+lower case, but the class itself in uppercase.
+
+For this reason, many identifiers must start with a lower case letter.
+
+So `mymod::thingy` would become `Mymod::Thingy`.
+
+## Titles and namevars
+
+Take this:
+
+```
+thingy { 'something':
+  foo    => "bar",
+  answer => 42,
+}
+```
+
+To break it down:
+
+- `thingy` is the class being referenced, the resource type
+- `something` is the title and the name, assigned to the namevar
+- `foo` and `anser` are parameters
+
+`$title` and `$name` are reserved variables for the above reason.
+"namevar" is a term used in the docs for the parameter that accepts
+the name. It is possible to explicitly set the namevar, in which
+case the name and the title can differ.
+
+[Puppet docs: Defined resource types: `$title` and `$name`](https://www.puppet.com/docs/puppet/latest/lang_defined_types.html#title-and-name)
