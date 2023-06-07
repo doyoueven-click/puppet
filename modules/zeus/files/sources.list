@@ -8,5 +8,5 @@ deb-src http://security.debian.org/debian-security bullseye-security main contri
 deb http://deb.debian.org/debian/ bullseye-updates main contrib non-free non-free-firmware
 deb-src http://deb.debian.org/debian/ bullseye-updates main contrib non-free
 
-deb http://deb.debian.org/debian/ bullseye-backports main non-free-firmware contrib non-free non-free-firmware
-deb-src http://deb.debian.org/debian/ bullseye-backports main non-free-firmware contrib non-free
+deb http://deb.debian.org/debian/ bullseye-backports main contrib non-free non-free-firmware
+deb-src http://deb.debian.org/debian/ bullseye-backports main contrib non-free
