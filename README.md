@@ -29,6 +29,7 @@ More info can be found in at [Directories and files in the puppet docs](https://
 - Absolutely no secrets story
 - Deep hiera
 - Puppet status reporting
+- Bulk file deployment
 
 ## Deploying changes
 
@@ -36,3 +37,24 @@ Change management is done through the forge UI (ie, through GitHub pull
 requests). When merged, new code will be picked up and applied to each server
 as they run their updates. That means that changes can take an hour to
 apply, and neither deployment nor puppet status is reported to GitHub.
+
+## Development
+
+The entrypoint for human commands is [just](https://just.systems/).
+
+Just commands should be run from a code checkout on your workstation.
+
+### Send your code to a box
+
+tl;dr: `just ship HOSTNAME`
+
+You can "ship" your local workspace to a host and have it try to apply it. Note
+that the host must have already been bootstrapped, and that you have to restore
+it to the production code afterwards.
+
+### Adopting a Box
+
+tl;dr: `just bootstrap HOSTNAME`
+
+A puppet installation script is in the repo, and a Just command to use it. This will
+install necessary dependencies and run Puppet.

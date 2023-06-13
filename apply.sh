@@ -4,6 +4,7 @@ set -eu
 cd /etc/puppetlabs/code
 export PATH=/opt/puppetlabs/puppet/bin:$PATH
 
+# FIXME: Check for $NO_GIT
 git pull --ff-only --quiet
 
 # FIXME: r10k
