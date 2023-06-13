@@ -20,7 +20,7 @@ class dyec::user_install(
   }
 
   file { '/etc/sudoers.d/admin':
-    ensure => 'present',
-    contents => ' %admin ALL=(ALL) NOPASSWD:ALL',
+    ensure  => 'present',
+    content => ' %admin ALL=(ALL) NOPASSWD:ALL',
   }
 }
