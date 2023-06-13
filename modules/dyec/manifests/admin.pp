@@ -11,7 +11,7 @@ define dyec::admin(
   -> user { $username:
     ensure     => present,
     comment    => $fullname,
-    group      => $username,
+    gid        => $username,
     groups     => [
       'admin',
       'sudo'
