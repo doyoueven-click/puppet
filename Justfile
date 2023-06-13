@@ -9,7 +9,7 @@ bootstrap HOST:
 
 # Copy the code to a host and run puppet. Note that this only works if passwordless sudo is set up.
 ship HOST:
-  rsync --rsync-path="sudo rsync" -avz --exclude .git . {{HOST}}:/etc/puppetlabs/code
+  rsync --rsync-path="sudo rsync" -avz --exclude .git --exclude .tmp . {{HOST}}:/etc/puppetlabs/code
   ssh -t {{HOST}} sudo NO_GIT=true /etc/puppetlabs/code/apply.sh
 
 # Undo shipping, restoring it to production state

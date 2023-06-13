@@ -4,10 +4,11 @@ set -eu
 cd /etc/puppetlabs/code
 export PATH=/opt/puppetlabs/puppet/bin:$PATH
 
-# FIXME: Check for $NO_GIT
-git pull --ff-only --quiet
+if [ $NO_GIT != "true" ]; then
+  git pull --ff-only --quiet
+fi
 
-# FIXME: r10k
+librarian-puppet install --path /opt/puppetlabs/puppet/modules --verbose
 
 # FIXME: Add a debug option to enable graphs & catalog summary
 # FIXME: Log to console on bootstrap

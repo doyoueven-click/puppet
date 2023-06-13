@@ -21,7 +21,7 @@ apt-get install /tmp/puppet.deb
 apt-get update
 apt-get install puppet-agent
 
-/opt/puppetlabs/puppet/bin/gem install r10k
+/opt/puppetlabs/puppet/bin/gem install librarian-puppet
 
 mkdir -p /etc/puppetlabs
 rm -rf /etc/puppetlabs/code
