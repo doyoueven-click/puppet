@@ -49,8 +49,9 @@ Just commands should be run from a code checkout on your workstation.
 tl;dr: `just ship HOSTNAME`
 
 You can "ship" your local workspace to a host and have it try to apply it. Note
-that the host must have already been bootstrapped, and that you have to restore
-it to the production code afterwards.
+that the host must have already been bootstrapped.
+
+To restore a host to production state. use `just unship HOSTNAME`.
 
 ### Adopting a Box
 

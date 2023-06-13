@@ -12,6 +12,14 @@ ship HOST:
   rsync --rsync-path="sudo rsync" -avz --exclude .git . {{HOST}}:/etc/puppetlabs/code
   ssh -t {{HOST}} sudo NO_GIT=true /etc/puppetlabs/code/apply.sh
 
+# Undo shipping, restoring it to production state
+unship HOST:
+  ssh -t {{HOST}} sudo git -C /etc/puppetlabs/code reset --hard
+
+# Run puppet on a host
+apply HOST:
+  ssh -t {{HOST}} sudo /etc/puppetlabs/code/apply.sh
+
 # Show the docs in a nice local viewer
 docs:
   frogmouth docs
