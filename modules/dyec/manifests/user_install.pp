@@ -12,6 +12,8 @@ class dyec::user_install(
     'passwd':
       ensure => 'latest',
     ;
+    'rsync':
+      ensure => 'latest',
   }
 
   # Note that debian ships with a sudo group that allows for password sudo
