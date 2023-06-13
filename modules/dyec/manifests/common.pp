@@ -5,10 +5,10 @@ class dyec::common {
 
   dyec::admin {
     'astraluma':
-      fullname   => 'Jamie Bliss'
+      fullname   => 'Jamie Bliss',
       sshkeys_ed => {
         "cardno:000612285692" => "AAAAC3NzaC1lZDI1NTE5AAAAINEgcvdotsdIAp0s6uqQI/p+EYUAUVscL2w5K1cmJDG6"
-      }
+      },
     ;
     'agmlego':
       fullname   => 'Amelia Meyer',
@@ -23,7 +23,7 @@ class dyec::common {
       fullname   => 'nicoo',
       sshkeys_ed => {
         "neon" => "AAAAC3NzaC1lZDI1NTE5AAAAIEPefie/fg02FIqUJ+wgEe9OmECEcfyW6EPKo4x1AWfK",
-      }
+      },
     ;
   }
   # TODO: User-specific configurations
