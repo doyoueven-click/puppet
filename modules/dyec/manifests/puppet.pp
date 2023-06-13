@@ -7,4 +7,9 @@ class puppet {
     minute  => fqdn_rand(60, "puppet apply"),
   }
   # TODO: Also run puppet apply on reboot
+
+  service { 'puppet-agent':
+    ensure => 'stopped',
+    enable => false,
+  }
 }
