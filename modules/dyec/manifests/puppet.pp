@@ -1,5 +1,5 @@
 # Manages the puppet installation itself
-class puppet {
+class dyec::puppet {
   # Run puppet periodically
   cron { 'puppet apply':
     command => '/etc/puppet/code/apply.sh',

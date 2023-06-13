@@ -1,5 +1,5 @@
 # Sets up essential groups, sudo, and other baseline user stuff.
-class user_install(
+class dyec::user_install(
   # TODO: Options
 ) {
   package {
