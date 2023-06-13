@@ -13,7 +13,7 @@ set -euox
 # source /etc/os-release
 VERSION_CODENAME=bullseye
 
-apt-get install -y git wget
+apt-get install -y git wget rsync
 
 # Puppet-release only covers the apt repo, puppet-agent is the actual software
 wget https://apt.puppet.com/puppet8-release-$VERSION_CODENAME.deb -O /tmp/puppet.deb
