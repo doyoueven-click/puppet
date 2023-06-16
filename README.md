@@ -52,10 +52,3 @@ You can "ship" your local workspace to a host and have it try to apply it. Note
 that the host must have already been bootstrapped.
 
 To restore a host to production state. use `just unship HOSTNAME`.
-
-### Adopting a Box
-
-tl;dr: `just bootstrap HOSTNAME`
-
-A puppet installation script is in the repo, and a Just command to use it. This will
-install necessary dependencies and run Puppet.
