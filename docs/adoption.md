@@ -3,6 +3,19 @@
 Congratulations! You have a bouncing baby box! Or maybe an old box you want to
 induct Puppet into. Here's how to do it!
 
+## Step 0: Prerequisites
+
+This process assumes that on your workstation, you have:
+
+- A checkout of this repo
+- Functioning SSH to the box (password is fine) with scp
+- [just](https://just.systems/)
+
+On the remote host you wish to install Puppet on, you need:
+
+- An OS (We currently strongly prefer Debian)
+- Functioning SSH with scp
+
 ## Step 1: Add a Boxen File
 
 The Puppet entrypoints are kept in the `boxen/` directory. In there, you will
@@ -24,13 +37,12 @@ Be sure to commit and push after you've written the boxen file.
 
 ## Step 2: Bootstrap Puppet
 
-The second part is to actually install Puppet and get it going. If you already have
-[just](https://just.systems/), this is a simple invocation of:
+The second part is to actually install Puppet and get it going. On your
+workstation, run the command:
 
     just bootstrap <HOSTNAME>
 
-This will SSH into the box, copy the bootstrap script, and run it as root. The script
-will install Puppet and dependencies, set up some repos, and run Puppet for the first
-time. When it is finsihed, Puppet is completely installed and running autonomously.
-
-If you do not have just, open the `Justfile` and run the commands manually.
+This will SSH into the box, copy the bootstrap script, and run it as root. The
+script will install Puppet and dependencies, set up some repos, and run Puppet
+for the first time. When it is finsihed, Puppet is completely installed and
+running autonomously.
