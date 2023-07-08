@@ -10,6 +10,8 @@ forge "https://forgeapi.puppet.com"
 #mod 'puppetlabs-stdlib'
 mod 'puppetlabs-vcsrepo', '6.1.0'
 
+mod 'puppet-caddy', '2.0.0'
+
 # A module from git
 # mod 'puppetlabs-ntp',
 #   :git => 'git://github.com/puppetlabs/puppetlabs-ntp.git'
