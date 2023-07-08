@@ -4,7 +4,7 @@ set -e
 cd /etc/puppetlabs/code
 export PATH=/opt/puppetlabs/puppet/bin:$PATH
 
-if [ $NO_GIT != "true" ]; then
+if [ -z "$NO_GIT" ]; then
   git pull --ff-only --quiet
 fi
 
