@@ -13,7 +13,6 @@ define dyec::admin(
     comment    => $fullname,
     gid        => $username,
     groups     => [
-      'admin',
       'sudo'
     ],
     home       => "/home/$username",
