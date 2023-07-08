@@ -14,6 +14,7 @@ This process assumes that on your workstation, you have:
 On the remote host you wish to install Puppet on, you need:
 
 - An OS (We currently strongly prefer Debian)
+  - Please setup to use sudo instead of a root password
 - Functioning SSH with scp
 
 ## Step 1: Add a Boxen File
