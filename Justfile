@@ -1,3 +1,5 @@
+set windows-shell := ["powershell", "-c"] # To use PowerShell Desktop instead of Core on Windows
+
 # Show this help
 help:
   @just --list

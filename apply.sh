@@ -1,6 +1,6 @@
 #!/bin/sh
 # Updates the code and runs puppet
-set -eu
+set -e
 cd /etc/puppetlabs/code
 export PATH=/opt/puppetlabs/puppet/bin:$PATH
 
