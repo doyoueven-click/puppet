@@ -8,13 +8,19 @@ More extensive documentation can be found in the [docs folder](./docs/README.md)
 
 ## Repo Layout
 
+- `docs/`: A pile of markdown talking about tools, processes, and puppet itself.
 - `boxen/`: Puppet entrypoints for each individual box, by host basename. Minimal
   actual code should be in here, instead simply doing requires.
 - `modules/`: Local puppet modules, should be the bulk of the "meaningful"
   code.
+
+In addition, some of the important files are
+
 - `apply.sh`: The execution entry point to update everything and perform a puppet run.
-- `bootstrap.sh`: Script to instantiate puppet on a fresh system. Should be
-  invoked with `just bootstrap $HOSTNAME`
+- `bootstrap.sh`: Installs and initializes Puppet. See [Adopting a New Box](docs/adoption.md).
+- `Justfile`: Commands for people working in this repo, using [just](https://just.systems/).
+- `Puppetfile`: Dependencies of puppet, see [Puppet & Dependencies](docs/puppetfile.md).
+- `README.md`: This file
 
 ## Host layout
 
