@@ -1,13 +1,13 @@
 # Invoke emanate, ensuring that the dotfiles repo is uptodate first
 # @param repo The git repo containing the dotfiles
 # @param source The local directory to clone the repo into
-# @param destination The place to symlink dotfiles to
+# @param destination The place to symlink dotfiles to (also $namevar)
 # @param user The user to execute as
 # @param group The group to execute as
 define emanate (
   String $repo,
   String $source,
-  String $destination,
+  String $destination = $title,
   String $user,
   String $group
 ) {
