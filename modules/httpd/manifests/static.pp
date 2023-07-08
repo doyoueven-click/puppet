@@ -6,7 +6,10 @@ define httpd::static (
   String $webroot,
 ) {
   require caddy
-  caddy::vhost { $hostname:
+  file { $webroot:
+    ensure => 'directory',
+  }
+  -> caddy::vhost { $hostname:
     content => "
     ${hostname} {
       root * ${webroot}
