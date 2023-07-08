@@ -7,6 +7,7 @@ class dyec::users::agmlego {
         'inanna'             => 'AAAAC3NzaC1lZDI1NTE5AAAAIDF2jQHtDMUz84Ul644Nf6nqeI7tedN0eRmjys8JrSgK',
         'agmlego@PERSEPHONE' => 'AAAAC3NzaC1lZDI1NTE5AAAAIN6iK3W4imsyJqlcZwmhdcNp6elpkYryEULvJxXKtP3Q',
         'enedina'            => 'AAAAC3NzaC1lZDI1NTE5AAAAIIxULzQqLX7m9IEiWh/EdejyNi+i5i0sTVaXW2wdhafl',
+        'estrin'             => 'AAAAC3NzaC1lZDI1NTE5AAAAIFZ4/NqIbbrPwOT7LXE0yEMn/NuVnfSu3rf5m9pBEclc',
       },
   }
   -> emanate { '/home/agmlego':
