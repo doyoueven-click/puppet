@@ -1,12 +1,12 @@
 class pkgs::python {
   package {
     'python3':
-      ensure => 'installed',
+      ensure => 'latest',
     ;
     'python3-pip':
-      ensure => 'installed',
+      ensure => 'latest',
     ;
     'python3-venv':
-      ensure => 'installed',
+      ensure => 'latest',
   }
 }
