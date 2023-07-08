@@ -10,7 +10,7 @@ class dyec::users::agmlego {
       },
   }
   -> emanate { '/home/agmlego':
-    repo   => '',
+    repo   => 'git@github.com:agmlego/dotfiles.git',
     source => '/home/agmlego/dotfiles',
     user   => 'agmlego',
     group  => 'agmlego',
