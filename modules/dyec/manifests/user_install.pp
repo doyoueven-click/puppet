@@ -2,6 +2,7 @@
 class dyec::user_install (
   # TODO: Options
 ) {
+  require pkgs::python
   package {
     'zsh':
       ensure => 'latest',
@@ -14,9 +15,6 @@ class dyec::user_install (
       ;
     'rsync':
       ensure => 'latest',
-      ;
-    'python3-pip':
-      ensure => 'installed',
       ;
     'vim':
       ensure=> 'installed',
