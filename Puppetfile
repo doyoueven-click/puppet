@@ -10,7 +10,10 @@ forge "https://forgeapi.puppet.com"
 #mod 'puppetlabs-stdlib'
 mod 'puppetlabs-vcsrepo', '6.1.0'
 
-mod 'puppet-caddy', '2.0.0'
+# puppet-caddy has Bugs and hasn't released since 2020
+mod 'puppet-caddy',
+  :git => 'https://github.com/doyoueven-click/puppet-caddy.git',
+  :ref => 'fix-github'
 
 # A module from git
 # mod 'puppetlabs-ntp',
