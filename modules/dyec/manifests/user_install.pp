@@ -17,22 +17,25 @@ class dyec::user_install (
       ensure => 'latest',
       ;
     'vim':
-      ensure=> 'installed',
+      ensure=> 'latest',
       ;
     'git':
-      ensure=> 'installed',
+      ensure=> 'latest',
       ;
     'screen':
-      ensure=> 'installed',
+      ensure=> 'latest',
       ;
     'tmux':
-      ensure=> 'installed',
+      ensure=> 'latest',
       ;
     'di':
-      ensure=> 'installed',
+      ensure=> 'latest',
       ;
     'htop':
-      ensure=> 'installed',
+      ensure=> 'latest',
+      ;
+    'molly-guard':
+      ensure => 'latest',
       ;
   }
 
