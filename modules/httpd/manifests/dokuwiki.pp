@@ -11,7 +11,7 @@ define httpd::dokuwiki (
   String $group = 'www-data',
 ) {
   require pkgs::php82
-  include caddy
+  include httpd
 
   $php_sock = '/run/php/php8.2-fpm.sock'
   file { $webroot:
