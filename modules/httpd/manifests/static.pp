@@ -9,7 +9,7 @@ define httpd::static (
   String $user = 'www-data',
   String $group = 'www-data',
 ) {
-  require caddy
+  include caddy
   file { $webroot:
     ensure => 'directory',
     owner  => $user,

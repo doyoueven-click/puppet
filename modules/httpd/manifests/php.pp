@@ -14,7 +14,7 @@ define httpd::php (
     $php_sock = '/run/php/php8.2-fpm.sock'
     require pkgs::php82
   }
-  require caddy
+  include caddy
   file { $webroot:
     ensure => 'directory',
     owner  => $user,
